@@ -14,8 +14,12 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.bffs",
-          "match": "(//|COMMENT|hüttel:).*"
+          "name": "comment.line.double-slash.bffs",
+          "match": "//.*"
+        },
+        {
+          "name": "comment.line.keyword.bffs",
+          "match": "\\bCOMMENT\\b.*"
         },
         {
           "name": "comment.block.bffs",
@@ -23,7 +27,7 @@
           "end": "\\*/"
         }
       ]
-    },
+    }
     "keywords": {
       "patterns": [
         {
