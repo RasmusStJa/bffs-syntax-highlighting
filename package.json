@@ -1,0 +1,25 @@
+{
+  "name": "bffs-sh",
+  "displayName": "bffs-sh",
+  "description": "BFFS Programming Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.112.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bffs",
+      "aliases": ["bffs", "bffs"],
+      "extensions": [".bffs"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bffs",
+      "scopeName": "source.bffs",
+      "path": "./syntaxes/bffs.tmLanguage.json"
+    }]
+  }
+}
