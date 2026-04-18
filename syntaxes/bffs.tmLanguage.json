@@ -14,17 +14,8 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.line.double-slash.bffs",
-          "match": "//.*"
-        },
-        {
-          "name": "comment.line.keyword.bffs",
-          "match": "\\bCOMMENT\\b.*"
-        },
-        {
-          "name": "comment.block.bffs",
-          "begin": "/\\*",
-          "end": "\\*/"
+          "name": "comment.line.bffs",
+          "match": "(//|COMMENT|hüttel:).*"
         }
       ]
     }
