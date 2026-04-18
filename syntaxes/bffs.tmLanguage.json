@@ -15,31 +15,32 @@
       "patterns": [
         {
           "name": "comment.line.bffs",
-          "match": "(//|COMMENT|hüttel:).*"
+          "match": "(?://|\\bCOMMENT\\b).*"
+        },
+        {
+          "name": "comment.block.bffs",
+          "begin": "/\\*",
+          "end": "\\*/"
         }
       ]
-    }
+    },
     "keywords": {
       "patterns": [
         {
           "name": "keyword.control.bffs",
-          "match": "\\b(let|in|stream|from|to)\\b"
+          "match": "\\b(let|in|func|send|loop|stream|from|to)\\b"
         },
         {
-          "name": "support.function.stream.bffs",
-          "match": "\\b(filter|map|merge|zip|unzip|scan|reduce|delay)\\b"
+          "name": "support.function.bffs",
+          "match": "\\b(filter|map|merge|zip|unzip|scan|reduce|delay|mod|EQ|NOT|LESS|MORE|AND|OR)\\b"
         }
       ]
     },
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.word.bffs",
-          "match": "\\b(mod|EQ|NOT|LESS|MORE|AND|OR)\\b"
-        },
-        {
           "name": "keyword.operator.symbol.bffs",
-          "match": "(\\+|-|\\*|/|=|=>|\\\\|:|_)"
+          "match": "(?:=>|\\+|-|\\*|/|=|\\\\|:|_)"
         }
       ]
     },
@@ -59,7 +60,14 @@
       "patterns": [
         {
           "name": "string.quoted.double.bffs",
-          "match": "\"[^\"]*\""
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.bffs",
+              "match": "\\\\."
+            }
+          ]
         }
       ]
     },

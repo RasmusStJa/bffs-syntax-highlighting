@@ -1,0 +1,43 @@
+//Example 1
+
+// Stream setup
+stream input_stream from sensor_data;
+stream output_stream to dashboard;
+
+// Logic
+multiplier = 10;
+
+/* Process the stream:
+   Multiply each element by 10 and filter out small values
+*/
+// ofhvgiu  hgo3qhiu g np983 49p8 
+COMMENT 49p8 giver Integer (49) Identifier(p8) da den starter med int
+
+main = 
+    let 
+        processed = map (\x => x * multiplier) input_stream,
+        filtered = filter (\y => y MORE 100) processed
+    in 
+        filtered;
+
+// Using lists and patterns
+sum_pair = \(a, b) => a + b;
+
+//Example 2
+stream numbersA from sourceOfNumbersA
+stream numbersB from sourceOfNumbersB
+
+func f_step(a, b) = (b, a mod b)
+
+// Zipper to streams ind i en ny 2-tuple-stream
+stream args = numbersA zip numbersB
+
+// Loop og args er 2-tuple og f_step tager og giver 2-tuple (implicit)
+stream loop = args merge (delay 2 (loop filter (NOT (numbersB EQ 0)) map f_step))
+
+// Kun send hvis base-case
+send (loop filter (numbersB EQ 0)) // Svar i a fra tuplen (a, b)
+
+// Evt. lav en map som tager res ud fra zip:
+func get_left(a, b) = a
+send (loop filter (numbersB EQ 0)) map get_left
