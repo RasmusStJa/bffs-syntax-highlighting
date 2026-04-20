@@ -32,7 +32,7 @@
         },
         {
           "name": "support.function.bffs",
-          "match": "\\b(filter|map|merge|zip|unzip|scan|reduce|delay|mod|EQ|NOT|LESS|MORE|AND|OR)\\b"
+          "match": "\\b(filter|map|merge|zip|unzip|scan|buffer|reduce|delay|mod|EQ|NOT|LESS|MORE|AND|OR)\\b"
         }
       ]
     },
