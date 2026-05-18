@@ -1,8 +1,8 @@
 {
   "name": "before-sh",
-  "displayName": "before-sh",
+  "displayName": "BEFORE",
   "description": "BEFORE Programming Language",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.112.0"
   },
@@ -10,16 +10,20 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "before",
-      "aliases": ["before", "before"],
-      "extensions": [".bffs", ".bfr"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "before",
-      "scopeName": "source.before",
-      "path": "./syntaxes/before.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "before",
+        "aliases": ["BEFORE", "bfr"],
+        "extensions": [".bffs", ".bfr"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "before",
+        "scopeName": "source.before",
+        "path": "./syntaxes/before.tmLanguage.json"
+      }
+    ]
   }
 }
