@@ -1,4 +1,4 @@
-# BFFS Syntax Highlighting for VSCode
+# BEFORE Syntax Highlighting for VSCode
 A basic syntax highlighter for our custom language
 
 # Building

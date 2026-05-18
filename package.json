@@ -1,7 +1,7 @@
 {
-  "name": "bffs-sh",
-  "displayName": "bffs-sh",
-  "description": "BFFS Programming Language",
+  "name": "before-sh",
+  "displayName": "before-sh",
+  "description": "BEFORE Programming Language",
   "version": "0.0.4",
   "engines": {
     "vscode": "^1.112.0"
@@ -13,13 +13,13 @@
     "languages": [{
       "id": "bffs",
       "aliases": ["bffs", "bffs"],
-      "extensions": [".bffs"],
+      "extensions": [".bffs" ".bfr"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "bffs",
-      "scopeName": "source.bffs",
-      "path": "./syntaxes/bffs.tmLanguage.json"
+      "language": "before",
+      "scopeName": "source.before",
+      "path": "./syntaxes/before.tmLanguage.json"
     }]
   }
 }
