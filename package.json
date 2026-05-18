@@ -11,9 +11,9 @@
   ],
   "contributes": {
     "languages": [{
-      "id": "bffs",
-      "aliases": ["bffs", "bffs"],
-      "extensions": [".bffs" ".bfr"],
+      "id": "before",
+      "aliases": ["before", "before"],
+      "extensions": [".bffs", ".bfr"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
